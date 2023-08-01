@@ -1,0 +1,26 @@
+.login-background {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-size: cover;
+  height: 100vh;
+}
+.login-button {
+  background-color: #2d60ff;
+  color: #ffffff;
+  padding: 10px;
+  border-width: 0;
+  text-align: center;
+  width: 25vw;
+  border-radius: 25px;
+  cursor: pointer;
+}
+.button-background {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+.text {
+  text-align: center;
+  color: maroon;
+}

@@ -1,0 +1,55 @@
+.debit-background {
+  display: flex;
+}
+.Alltransactions-background {
+  display: flex;
+}
+
+.transaction-background2 {
+  display: inline-flex;
+  padding: 16px 30px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 16px;
+  border-radius: 25px;
+  background: #fff;
+  margin-top: 20px;
+}
+.container {
+  display: flex;
+  justify-content: space-around;
+
+  width: 80vw;
+}
+.transaction-name {
+  color: #343c6a;
+  font-family: Inter;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+.category {
+  color: #343c6a;
+  font-family: Inter;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+.date {
+  color: #343c6a;
+  font-family: Inter;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+.amount {
+  color: #343c6a;
+  font-family: Inter;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}

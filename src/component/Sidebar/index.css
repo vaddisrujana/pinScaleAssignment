@@ -1,0 +1,96 @@
+.background1 {
+  width: 250px;
+  height: 1024px;
+  flex-shrink: 0;
+  border-right: 1px solid #e2e2e2;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.money-matters {
+  display: flex;
+  display: inline-flex;
+  align-items: center;
+  gap: 11px;
+}
+.money-title {
+  color: #f89a23;
+  font-family: Poppins;
+  font-size: 19.66px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: normal;
+}
+.matters-title {
+  color: #02969c;
+  font-family: Poppins;
+  font-size: 19.66px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: normal;
+}
+.home {
+  display: flex;
+  width: 189px;
+  height: 60px;
+  justify-content: center;
+  align-items: center;
+  gap: 38px;
+  flex-shrink: 0;
+}
+.transaction {
+  display: flex;
+  width: 189px;
+  height: 60px;
+  justify-content: center;
+  align-items: center;
+  gap: 38px;
+
+  flex-shrink: 0;
+}
+.profile {
+  display: flex;
+  width: 189px;
+  height: 60px;
+  justify-content: center;
+  align-items: center;
+  gap: 38px;
+  flex-shrink: 0;
+}
+.user-details {
+  display: flex;
+
+  padding: 24px 32px 0px 24px;
+  align-items: center;
+  gap: 4px;
+  align-self: stretch;
+  border-top: 1px solid #eaecf0;
+}
+.user {
+  width: 40px;
+  height: 40px;
+
+  border-radius: 200px;
+}
+.name {
+  color: #505887;
+
+  font-family: Inter;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 20px; /* 142.857% */
+}
+.email {
+  color: #718ebf;
+  font-family: Inter;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px; /* 142.857% */
+}
+.logout-button {
+  background-color: transparent;
+  border-width: 0;
+}
