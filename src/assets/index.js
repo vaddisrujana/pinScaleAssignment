@@ -10,6 +10,8 @@ import profilepic from "./profilepic.png";
 import creditIcon from "./creditIcon.svg";
 import debitIcon from "./debitIcon.svg";
 import edit from "./edit.svg";
+import downArrow from "./downArrow.svg";
+import upArrow from "./upArrow.svg";
 
 import popupLogout from "./popupLogout.svg";
 import delete1 from "./delete1.svg";
@@ -29,4 +31,6 @@ export {
   creditIcon,
   debitIcon,
   edit,
+  upArrow,
+  downArrow,
 };

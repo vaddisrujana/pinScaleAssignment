@@ -1,14 +1,12 @@
 import Delete from "../Delete";
 import Edit from "../Edit";
-import { credit, debit, debitIcon, creditIcon } from "../../assets";
+import { downArrow, upArrow } from "../../assets";
 import "./index.css";
 
-const CreditDebitOverview = (props) => {
-  const { creditDebitDetails } = props;
-  const { date, sum, type } = creditDebitDetails;
-  const icon = type === "credit" ? creditIcon : debitIcon;
-  const className = type === "credit" ? "credit" : "debit";
-  const amount = type === "credit" ? sum : `-${sum}`;
+const AllTransactionDetails = (props) => {
+  const { transactionDetails } = props;
+  const { transaction_name, category, date, amount, type } = transactionDetails;
+  const arrow = type === "credit" ? upArrow : downArrow;
 
   const formatDate = (dateString) => {
     const date = new Date(dateString);
@@ -26,10 +24,15 @@ const CreditDebitOverview = (props) => {
   const formattedDate = formatDate(originalDate);
   return (
     <li className="list">
-      <div className="flex-transaction">
-        <img src={icon} />
+      <div className="container">
+        <div className="flex">
+          <img src={arrow} alt="arrow" />
+          <p className="para">{transaction_name}</p>
+        </div>
+
+        <p>{category}</p>
         <p>{formattedDate}</p>
-        <p className={className}>{amount}</p>
+        <p>{amount}</p>
         <Edit />
         <Delete />
       </div>
@@ -37,4 +40,4 @@ const CreditDebitOverview = (props) => {
   );
 };
 
-export default CreditDebitOverview;
+export default AllTransactionDetails;

@@ -2,38 +2,47 @@ import React, { Component } from "react";
 import axios from "axios";
 import Sidebar from "../Sidebar";
 import YourTransactions from "../YourTransactions";
+import AllTransactionDetails from "../AllTransactionDetails";
 
 import "./index.css";
 
 class AllTransactions extends Component {
   state = {
-    transactions: [],
+    transactionsList: [],
   };
 
   componentDidMount() {
     this.fetchData();
   }
 
-  fetchData = async () => {
+  async fetchData() {
     try {
-      const url =
+      const apiUrl =
         "https://bursting-gelding-24.hasura.app/api/rest/all-transactions";
       const headers = {
-        "content-type": "application/json",
+        "Content-Type": "application/json",
         "x-hasura-admin-secret":
           "g08A3qQy00y8yFDq3y6N1ZQnhOPOa4msdie5EtKS1hFStar01JzPKrtKEzYY2BtF",
         "x-hasura-role": "user",
-        "x-hasura-user-id": "1",
+        "x-hasura-user-id": "3",
+      };
+      const requestBody = {
+        limit: 2,
+        offset: 2,
       };
 
-      const response = await axios.get(url, { headers });
-      this.setState({ transactions: response.data });
+      const response = await axios.get(apiUrl, {
+        headers,
+        params: requestBody,
+      });
+      console.log("Response:", response.data.transactions);
+      this.setState({ transactionsList: response.data.transactions });
     } catch (error) {
-      console.error("Error fetching data:", error);
+      console.error("Error fetching transactions:", error);
     }
-  };
-
+  }
   render() {
+    const { transactionsList } = this.state;
     return (
       <div className="Alltransactions-background">
         <Sidebar />
@@ -45,7 +54,14 @@ class AllTransactions extends Component {
               <p className="category">Category</p>
               <p className="date">Date</p>
               <p className="amount">Amount</p>
+              <p className="amount">edit</p>
+              <p className="amount">delete</p>
             </div>
+            <ul>
+              {transactionsList.map((each) => (
+                <AllTransactionDetails transactionDetails={each} />
+              ))}
+            </ul>
           </div>
         </div>
       </div>
